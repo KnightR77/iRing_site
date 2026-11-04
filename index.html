@@ -111,15 +111,82 @@
       <div class="section-label"><span>03 / Nano interactions</span><span>Small movements. Direct feedback.</span></div>
       <div class="section-intro"><h2 id="interaction-title">You already know<br>the gestures.</h2><div class="intro-copy"><p>Tap, slide, pinch, and spread—familiar touch primitives adapted to an ultra-small, curved display. Nano interactions connect compact finger movements to immediate visual responses.</p></div></div>
       <div class="gesture-layout">
-        <figure class="touch-figure"><img src="assets/touch.webp" width="1100" height="733" loading="lazy" alt="A thumb touching the iRing display on the index finger"><figcaption>One-handed input. On-finger feedback.</figcaption></figure>
-        <ol class="gesture-list">
-          <li><span class="gesture-number">01</span><div><h3>Single tap</h3><p>One brief contact.</p></div><span class="gesture-symbol" aria-hidden="true">·</span></li>
-          <li><span class="gesture-number">02</span><div><h3>Double tap</h3><p>Two taps in quick succession.</p></div><span class="gesture-symbol" aria-hidden="true">··</span></li>
-          <li><span class="gesture-number">03</span><div><h3>Long press</h3><p>Touch and hold.</p></div><span class="gesture-symbol" aria-hidden="true">—</span></li>
-          <li><span class="gesture-number">04</span><div><h3>Slide</h3><p>Move across adjacent regions.</p></div><span class="gesture-symbol" aria-hidden="true">→</span></li>
-          <li><span class="gesture-number">05</span><div><h3>Pinch</h3><p>Bring two touch points together.</p></div><span class="gesture-symbol" aria-hidden="true">→←</span></li>
-          <li><span class="gesture-number">06</span><div><h3>Spread</h3><p>Move two touch points apart.</p></div><span class="gesture-symbol" aria-hidden="true">←→</span></li>
-        </ol>
+        <div class="gesture-preview-column">
+          <div class="gesture-previews" aria-hidden="true">
+            <div class="gesture-panel" data-gesture="single-tap">
+              <img src="assets/gestures.svg" width="2525" height="1692" loading="lazy" alt="" style="left:-0.609756%;top:-0.121951%">
+            </div>
+            <div class="gesture-panel" data-gesture="double-tap">
+              <img src="assets/gestures.svg" width="2525" height="1692" loading="lazy" alt="" style="left:-103.536585%;top:-0.365854%">
+            </div>
+            <div class="gesture-panel" data-gesture="long-press">
+              <img src="assets/gestures.svg" width="2525" height="1692" loading="lazy" alt="" style="left:-207.560976%;top:-0.243902%">
+            </div>
+            <div class="gesture-panel" data-gesture="slide">
+              <img src="assets/gestures.svg" width="2525" height="1692" loading="lazy" alt="" style="left:-0.243902%;top:-103.170732%">
+            </div>
+            <div class="gesture-panel" data-gesture="pinch">
+              <img src="assets/gestures.svg" width="2525" height="1692" loading="lazy" alt="" style="left:-103.902439%;top:-103.048780%">
+            </div>
+            <div class="gesture-panel" data-gesture="spread">
+              <img src="assets/gestures.svg" width="2525" height="1692" loading="lazy" alt="" style="left:-207.804878%;top:-103.048780%">
+            </div>
+          </div>
+          <p class="gesture-help" id="gesture-help">Hover or select a gesture to explore. Use arrow keys when focused.</p>
+        </div>
+        <fieldset class="gesture-options" aria-describedby="gesture-help">
+          <legend class="sr-only">Choose a nano interaction gesture</legend>
+          <ol class="gesture-list">
+            <li>
+              <label class="gesture-option" data-gesture="single-tap">
+                <input class="sr-only" type="radio" name="gesture" id="gesture-single-tap" value="single-tap" checked>
+                <span class="gesture-number" aria-hidden="true">01</span>
+                <span class="gesture-copy"><span class="gesture-name">Single tap</span><span class="gesture-description">One brief contact.</span></span>
+                <span class="gesture-symbol" aria-hidden="true">·</span>
+              </label>
+            </li>
+            <li>
+              <label class="gesture-option" data-gesture="double-tap">
+                <input class="sr-only" type="radio" name="gesture" id="gesture-double-tap" value="double-tap">
+                <span class="gesture-number" aria-hidden="true">02</span>
+                <span class="gesture-copy"><span class="gesture-name">Double tap</span><span class="gesture-description">Two taps in quick succession.</span></span>
+                <span class="gesture-symbol" aria-hidden="true">··</span>
+              </label>
+            </li>
+            <li>
+              <label class="gesture-option" data-gesture="long-press">
+                <input class="sr-only" type="radio" name="gesture" id="gesture-long-press" value="long-press">
+                <span class="gesture-number" aria-hidden="true">03</span>
+                <span class="gesture-copy"><span class="gesture-name">Long press</span><span class="gesture-description">Touch and hold.</span></span>
+                <span class="gesture-symbol" aria-hidden="true">—</span>
+              </label>
+            </li>
+            <li>
+              <label class="gesture-option" data-gesture="slide">
+                <input class="sr-only" type="radio" name="gesture" id="gesture-slide" value="slide">
+                <span class="gesture-number" aria-hidden="true">04</span>
+                <span class="gesture-copy"><span class="gesture-name">Slide</span><span class="gesture-description">Move across adjacent regions.</span></span>
+                <span class="gesture-symbol" aria-hidden="true">→</span>
+              </label>
+            </li>
+            <li>
+              <label class="gesture-option" data-gesture="pinch">
+                <input class="sr-only" type="radio" name="gesture" id="gesture-pinch" value="pinch">
+                <span class="gesture-number" aria-hidden="true">05</span>
+                <span class="gesture-copy"><span class="gesture-name">Pinch</span><span class="gesture-description">Bring two touch points together.</span></span>
+                <span class="gesture-symbol" aria-hidden="true">→←</span>
+              </label>
+            </li>
+            <li>
+              <label class="gesture-option" data-gesture="spread">
+                <input class="sr-only" type="radio" name="gesture" id="gesture-spread" value="spread">
+                <span class="gesture-number" aria-hidden="true">06</span>
+                <span class="gesture-copy"><span class="gesture-name">Spread</span><span class="gesture-description">Move two touch points apart.</span></span>
+                <span class="gesture-symbol" aria-hidden="true">←→</span>
+              </label>
+            </li>
+          </ol>
+        </fieldset>
       </div>
       <div class="processing"><span class="eyebrow">On-device pipeline</span><ol><li>Read 12 electrodes<span>50 Hz sampling</span></li><li>Resolve contacts<span>Thresholds + debounce</span></li><li>Recognize gesture<span>Position + motion + duration</span></li><li>Update display<span>Immediate local feedback</span></li></ol></div>
     </section>
