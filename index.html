@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#000000">
+  <meta name="description" content="iRing is an open-source smart ring with a flexible multi-point capacitive touch display. Explore nano interactions, hardware, applications, and the UIST 2026 research.">
+  <title>iRing — Touch. See. Interact.</title>
+  <link rel="preload" href="assets/fonts/CascadiaCode.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="wordmark" href="#" aria-label="iRing home"><span class="ring-mark" aria-hidden="true"></span>iRing</a>
+    <nav aria-label="Main navigation">
+      <a href="#overview">Overview</a>
+      <a href="#hardware">Hardware</a>
+      <a href="#interaction">Interaction</a>
+      <a href="#applications">Applications</a>
+    </nav>
+    <a class="header-paper" href="3830398.3830549.pdf">Read the paper <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main id="main">
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> Penn State <span class="separator">/</span> UIST ’26</p>
+        <h1 id="hero-title">iRing<span class="title-period">.</span></h1>
+        <p class="hero-subtitle">Rich interaction.<br>Right on your finger.</p>
+        <p class="hero-description">A smart ring with a multi-point capacitive touch screen. Familiar gestures. Immediate visual feedback. All on one curved surface.</p>
+        <div class="actions">
+          <a class="button button-solid" href="3830398.3830549.pdf">Paper <span aria-hidden="true">↗</span><span class="sr-only"> (PDF)</span></a>
+          <a class="button" href="#demo">Watch demo <span aria-hidden="true">↘</span></a>
+        </div>
+      </div>
+      <figure class="hero-figure">
+        <img src="assets/iring-hero.webp" width="584" height="573" alt="The iRing prototype, with a transparent case and a curved OLED screen displaying its name" fetchpriority="high">
+        <figcaption><span>01 / iRing prototype</span><span>6.4 g. Fully on-finger.</span></figcaption>
+      </figure>
+    </section>
+
+    <div class="project-meta wrap">
+      <div class="authors" aria-label="Authors">
+        <span>Runze Liu<sup>*</sup></span><span>Taiting Lu<sup>*</sup></span><span>Zhenghao Li</span><span>Yixi Wang</span><span>Shengming Yuan</span><span>Mahanth Gowda</span>
+      </div>
+      <div class="affiliation"><span>Pennsylvania State University</span><span>* Equal co-primary authors</span></div>
+    </div>
+
+    <section class="overview section wrap" id="overview" aria-labelledby="overview-title">
+      <div class="section-label"><span>01 / Overview</span><span>Input + output, together</span></div>
+      <div class="section-intro">
+        <h2 id="overview-title">A small surface.<br>A richer interaction.</h2>
+        <div class="intro-copy"><p>What if you could touch a ring and see its response, right where you interact?</p><p>iRing brings capacitive multi-touch and a flexible OLED display to the same finger-worn surface. It closes the loop between input and feedback, enabling brief, glanceable interactions with a thumb or the other hand.</p></div>
+      </div>
+      <dl class="spec-strip">
+        <div><dt>Lightweight prototype</dt><dd>6.4<span>g</span></dd></div>
+        <div><dt>Flexible OLED display</dt><dd>160<span>×</span>32</dd></div>
+        <div><dt>Familiar touch gestures</dt><dd>6</dd></div>
+        <div><dt>Capacitive electrodes</dt><dd>2<span>×</span>6</dd></div>
+      </dl>
+    </section>
+
+    <section class="demo-section wrap" id="demo" aria-labelledby="demo-title">
+      <div class="demo-heading"><h2 id="demo-title">See it in action.</h2><span class="eyebrow">Project demonstration / 02:40</span></div>
+      <video controls playsinline preload="none" poster="assets/media-control.webp" aria-label="iRing project demonstration: on-ring touch interaction and applications">
+        <source src="assets/iring-demo.mp4" type="video/mp4">
+        Your browser does not support embedded video. <a href="assets/iring-demo.mp4">Download the iRing demonstration.</a>
+      </video>
+      <p class="figure-note">Direct touch, on-ring feedback, and everyday application scenarios. Video from the project presentation.</p>
+    </section>
+
+    <section class="hardware section wrap" id="hardware" aria-labelledby="hardware-title">
+      <div class="section-label"><span>02 / Hardware</span><span>Designed in layers</span></div>
+      <div class="section-intro">
+        <h2 id="hardware-title">Built around<br>your finger.</h2>
+        <div class="intro-copy"><p>A custom flexible touch PCB sits over the OLED display. A compact main board, curved battery, and 3D-printed housing bring sensing, computation, and feedback into a wearable ring.</p><p>Designed as an open-source, reproducible platform for exploring on-ring interaction.</p></div>
+      </div>
+      <figure class="exploded-figure">
+        <img src="assets/iring-exploded.webp" width="1800" height="705" loading="lazy" alt="Exploded iRing hardware, from left to right: inner cover, curved battery, main board, flexible OLED display, touch sensing PCB, and outer cover">
+        <figcaption class="component-labels"><span><b>01</b> Inner cover</span><span><b>02</b> Arc battery</span><span><b>03</b> Main board</span><span><b>04</b> OLED display</span><span><b>05</b> Touch PCB</span><span><b>06</b> Outer cover</span></figcaption>
+      </figure>
+      <div class="hardware-details">
+        <article><span class="eyebrow">The touch layer</span><h3>Transparent.<br>Flexible. Multi-touch.</h3><p>Two rows of six electrodes on a transparent polyimide FPCB preserve display visibility. Thin traces connect the sensing areas to the capacitive touch controller.</p><img class="touch-pcb" src="assets/touch-pcb.webp" width="1400" height="554" loading="lazy" alt="The long flexible touch PCB with its two rows of capacitive sensing electrodes"></article>
+        <dl class="technical-specs">
+          <div><dt>Processor &amp; wireless</dt><dd>nRF52832 / Bluetooth LE</dd></div>
+          <div><dt>On-board sensing</dt><dd>PPG + IMU + temperature</dd></div>
+          <div><dt>Touch controller</dt><dd>MPR121 / 12 channels</dd></div>
+          <div><dt>Touch sampling</dt><dd>50 Hz / local processing</dd></div>
+          <div><dt>Power</dt><dd>60 mAh curved battery</dd></div>
+          <div><dt>Estimated component cost</dt><dd>$46.43 wholesale / $120.03 retail</dd></div>
+        </dl>
+      </div>
+      <details class="assembly">
+        <summary><span>From components to prototype</span><span class="details-hint">Assembly process <span class="expand-icon" aria-hidden="true"></span></span></summary>
+        <ol class="assembly-grid">
+          <li><img src="assets/assembly-1.webp" width="640" height="427" loading="lazy" alt="Ring components laid out before assembly"><span>01 / Prepare parts</span></li>
+          <li><img src="assets/assembly-2.webp" width="640" height="427" loading="lazy" alt="Components being soldered to the main board"><span>02 / Solder circuits</span></li>
+          <li><img src="assets/assembly-3.webp" width="640" height="427" loading="lazy" alt="Battery connection being soldered"><span>03 / Connect battery</span></li>
+          <li><img src="assets/assembly-4.webp" width="640" height="427" loading="lazy" alt="The flexible OLED being placed around the electronics"><span>04 / Install OLED</span></li>
+          <li><img src="assets/assembly-5.webp" width="640" height="427" loading="lazy" alt="Touch PCB being added to the display"><span>05 / Add touch PCB</span></li>
+          <li><img src="assets/assembly-6.webp" width="640" height="427" loading="lazy" alt="Electronics being inserted into the case"><span>06 / Assemble case</span></li>
+          <li><img src="assets/assembly-7.webp" width="640" height="427" loading="lazy" alt="The inner ring being fitted"><span>07 / Fit inner ring</span></li>
+          <li><img src="assets/assembly-8.webp" width="640" height="427" loading="lazy" alt="The completed ring prototype being tested"><span>08 / Test prototype</span></li>
+        </ol>
+      </details>
+    </section>
+
+    <section class="interaction section wrap" id="interaction" aria-labelledby="interaction-title">
+      <div class="section-label"><span>03 / Nano interactions</span><span>Small movements. Direct feedback.</span></div>
+      <div class="section-intro"><h2 id="interaction-title">You already know<br>the gestures.</h2><div class="intro-copy"><p>Tap, slide, pinch, and spread—familiar touch primitives adapted to an ultra-small, curved display. Nano interactions connect compact finger movements to immediate visual responses.</p></div></div>
+      <div class="gesture-layout">
+        <figure class="touch-figure"><img src="assets/touch.webp" width="1100" height="733" loading="lazy" alt="A thumb touching the iRing display on the index finger"><figcaption>One-handed input. On-finger feedback.</figcaption></figure>
+        <ol class="gesture-list">
+          <li><span class="gesture-number">01</span><div><h3>Single tap</h3><p>One brief contact.</p></div><span class="gesture-symbol" aria-hidden="true">·</span></li>
+          <li><span class="gesture-number">02</span><div><h3>Double tap</h3><p>Two taps in quick succession.</p></div><span class="gesture-symbol" aria-hidden="true">··</span></li>
+          <li><span class="gesture-number">03</span><div><h3>Long press</h3><p>Touch and hold.</p></div><span class="gesture-symbol" aria-hidden="true">—</span></li>
+          <li><span class="gesture-number">04</span><div><h3>Slide</h3><p>Move across adjacent regions.</p></div><span class="gesture-symbol" aria-hidden="true">→</span></li>
+          <li><span class="gesture-number">05</span><div><h3>Pinch</h3><p>Bring two touch points together.</p></div><span class="gesture-symbol" aria-hidden="true">→←</span></li>
+          <li><span class="gesture-number">06</span><div><h3>Spread</h3><p>Move two touch points apart.</p></div><span class="gesture-symbol" aria-hidden="true">←→</span></li>
+        </ol>
+      </div>
+      <div class="processing"><span class="eyebrow">On-device pipeline</span><ol><li>Read 12 electrodes<span>50 Hz sampling</span></li><li>Resolve contacts<span>Thresholds + debounce</span></li><li>Recognize gesture<span>Position + motion + duration</span></li><li>Update display<span>Immediate local feedback</span></li></ol></div>
+    </section>
+
+    <section class="applications section wrap" id="applications" aria-labelledby="applications-title">
+      <div class="section-label"><span>04 / Applications</span><span>Made for the moments in between</span></div>
+      <div class="section-intro"><h2 id="applications-title">A little interaction.<br>Throughout your day.</h2><div class="intro-copy"><p>The prototype explores how direct touch and glanceable feedback can support brief tasks, from controlling music on the move to navigating text and checking sensor readings.</p></div></div>
+      <div class="application-grid">
+        <article><div class="application-image"><img src="assets/media-control.webp" width="1280" height="720" loading="lazy" alt="A runner wearing iRing for on-the-go media control"></div><div class="application-heading"><span>01 / On the go</span><h3>Media control</h3></div><p>Adjust volume wirelessly while running, with feedback directly on the ring.</p></article>
+        <article><div class="application-image"><img src="assets/text.webp" width="1000" height="563" loading="lazy" alt="Text shown on iRing during a touch interaction"></div><div class="application-heading"><span>02 / At a glance</span><h3>Text manipulation</h3></div><p>Slide to scroll through messages. Pinch or spread to adjust text size.</p></article>
+        <article><div class="application-image"><img src="assets/health.webp" width="1000" height="563" loading="lazy" alt="A person viewing a health measurement on the ring display"></div><div class="application-heading"><span>03 / On the body</span><h3>Health monitoring</h3></div><p>Navigate sensor measurements and view heart rate and blood oxygen on the display.</p></article>
+        <article><div class="application-image"><img src="assets/games.webp" width="1000" height="563" loading="lazy" alt="A small game running on the curved ring display"></div><div class="application-heading"><span>04 / In the moment</span><h3>Interactive games</h3></div><p>Play Brick Breaker with touch and ring rotation, following the game on your finger.</p></article>
+      </div>
+      <p class="application-footnote">The paper also explores menu navigation and brief LLM-mediated interactions.</p>
+    </section>
+
+    <section class="evaluation section wrap" aria-labelledby="evaluation-title">
+      <div class="section-label"><span>05 / Evaluation</span><span>12 participants / Cross-user evaluation</span></div>
+      <div class="section-intro"><h2 id="evaluation-title">Small scale.<br>Measurable precision.</h2><div class="intro-copy"><p>A user study evaluated gesture recognition, learning, usability, comfort, and social acceptability. The results demonstrate the feasibility of direct touch interaction on a ring.</p></div></div>
+      <dl class="results">
+        <div><dd>97.7<span>%</span></dd><dt>Gesture recognition</dt><p>Across the six touch gesture classes.</p></div>
+        <div><dd>98.0<span>%</span></dd><dt>Tap location</dt><p>Across the 12 touch regions.</p></div>
+        <div><dd>96.5<span>%</span></dd><dt>Slide recognition</dt><p>Direction and segment count.</p></div>
+      </dl>
+      <p class="study-note">A short-term prototype study: long-term comfort, durability, and everyday use remain open research questions. Participants favored brief tasks such as media control and message scrolling; larger displays remain useful for tasks needing more visual space or precision.</p>
+    </section>
+
+    <section class="publication section wrap" id="paper" aria-labelledby="paper-title">
+      <div class="section-label"><span>06 / Research</span><span>UIST 2026 / Detroit, MI</span></div>
+      <div class="publication-layout">
+        <div><p class="eyebrow">The paper</p><h2 id="paper-title">iRing: Rich Interaction on Smart Ring with Multi-point Capacitive Touch Screen</h2><p class="publication-authors">Runze Liu*, Taiting Lu*, Zhenghao Li, Yixi Wang, Shengming Yuan, and Mahanth Gowda</p><p class="publication-venue">The 39th Annual ACM Symposium on User Interface Software and Technology<br>November 2–5, 2026 · Detroit, Michigan</p></div>
+        <div class="resource-links"><a href="3830398.3830549.pdf"><span>Read the paper<small>PDF / 4.4 MB</small></span><span aria-hidden="true">↗</span></a><a href="UIST2026_iRing_Cascadia.pptx" download><span>Presentation slides<small>PPTX / 324 MB</small></span><span aria-hidden="true">↓</span></a><a href="https://doi.org/10.1145/3830398.3830549"><span>ACM publication<small>DOI: 10.1145/3830398.3830549</small></span><span aria-hidden="true">↗</span></a></div>
+      </div>
+      <details class="citation"><summary>Cite this work <span class="expand-icon" aria-hidden="true"></span></summary><pre><code>@inproceedings{liu2026iring,
+  author = {Liu, Runze and Lu, Taiting and Li, Zhenghao and
+            Wang, Yixi and Yuan, Shengming and Gowda, Mahanth},
+  title = {iRing: Rich Interaction on Smart Ring with
+           Multi-point Capacitive Touch Screen},
+  booktitle = {Proceedings of the 39th Annual ACM Symposium
+               on User Interface Software and Technology},
+  series = {UIST '26},
+  year = {2026},
+  publisher = {Association for Computing Machinery},
+  doi = {10.1145/3830398.3830549}
+}</code></pre></details>
+      <p class="acknowledgment">Supported by the U.S. National Science Foundation, CAREER-2046972.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer wrap"><a class="wordmark" href="#">iRing<span aria-hidden="true">.</span></a><p>Penn State / UIST ’26</p><a href="#">Back to top <span aria-hidden="true">↑</span></a></footer>
+</body>
+</html>
