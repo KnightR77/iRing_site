@@ -8,9 +8,9 @@ Project page for iRing, the open-source smart ring with a multi-point capacitive
 
 ## Hosting
 
-The site is static HTML and CSS, with a locally hosted Cascadia Code font. It needs no package installation, build step, or backend. The existing Cloudflare Web Analytics snippet is the only executable JavaScript; the gesture controls use HTML and CSS.
+The site is static HTML and CSS, with a locally hosted Cascadia Code font. It needs no package installation, build step, or backend. A small local script follows the mouse with a soft blue-green background halo, and Cloudflare Web Analytics measures visits. The gesture controls use HTML and CSS. The halo is disabled for touch input and reduced-motion preferences.
 
-Serve the repository root with GitHub Pages or another static web server. Keep `index.html`, `style.css`, `assets/`, `sitemap.xml`, `.nojekyll`, and `3830398.3830549.pdf` together. The PowerPoint source is excluded from Git and is not required for hosting.
+Serve the repository root with GitHub Pages or another static web server. Keep `index.html`, `style.css`, `cursor-halo.js`, `assets/`, `sitemap.xml`, `.nojekyll`, and `3830398.3830549.pdf` together. The PowerPoint source is excluded from Git and is not required for hosting.
 
 For a local preview with Python already installed:
 
